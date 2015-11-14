@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "mx.cenet.hotelApp"
+        version     = "1.0.0"
+        versionCode = "1" >
+
+        <!-- versionCode is optional and Android only -->
+
+        <preference name="phonegap-version" value="3.7.0" />
+
+        <name>HotelApp</name>
+
+        <description>
+        	Aplicación de prueba de un hotel 
+        </description>
+
+        <author href="http://igitsoft.com" email="info@igitsoft.com">
+        	Carlos Celma
+        </author>
+
+		<!-- Plugins -->
+        <gap:plugin name="org.apache.cordova.device" source="pgb" version="0.3.0" />
+        <gap:plugin name="org.apache.cordova.dialogs" source="pgb" version="0.3.0" />
+        <gap:plugin name="org.apache.cordova.file-transfer" source="pgb" version="0.5.0" />
+        <gap:plugin name="org.apache.cordova.media-capture" source="pgb" version="0.3.6" />
+        <gap:plugin name="org.apache.cordova.network-information" source="pgb" version="0.2.15" />
+
+    </widget>

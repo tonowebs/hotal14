@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hotel App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div data-role="page" id="home">
+			<div data-role="header"><h1>Hotel App</h1></div>
+			<div role="main" class="ui-content">
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#nr1">Reservar</a></li>
+					<li><a href="#historial">Historial</a></li>
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<small>Todos los derechos reservados &copy;</small>
+				<a href="#nosotros" data-transition="slideup">Nosotros</a>
+			</div>
+		</div>
+		<div data-role="page" id="nosotros">
+			<div data-role="header">
+				<h1>Nosotros</h1>
+				<a href="#" data-rel="back" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all">Atrás</a>
+			</div>
+			<div role="main" class="ui-content">
+				Built and maintained by developers and designers passionate about web technologies. Ionic focuses on standards compliant code, is forward thinking, and is managed through Github. We're making mobile development with HTML5 awesome and simple.
+			</div>
+		</div>
+		<div data-role="page" id="reg">
+			<div data-role="header"><h1>Registro</h1></div>
+			<div role="main" class="ui-content">
+				<ul data-role="listview">
+					<li><input type="text" id="regName" placeholder="Nombre"></li>
+					<li><input type="email" id="regMail" placeholder="Correo Electrónico"></li>
+					<li><input type="tel" id="regTel" placeholder="Teléfono"></li>
+					<li><a href="#" id="takePhoto">Tomar Foto</a></li>
+				</ul>
+				<div id="regPhoto"></div>
+			</div>
+			<div data-role="footer">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#" class="ui-btn-active" id="regSend">Registrar</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div>
+		</div>
+		<!-- PAGINA 1 DE RESERVA -->
+		<div data-role="page" id="nr1">
+			<div data-role="header">
+				<h1>Reserva</h1>
+			</div>
+			<div role="main" class="ui-content">
+				<ul data-role="listview">
+					<li data-role="list-divider">Selecciona el tipo de habitación</li>
+					<li><a href="#">Sencilla</a></li>
+					<li><a href="#">Doble</a></li>
+					<li><a href="#">Suite</a></li>
+				</ul>
+			</div>
+			<div data-role="footer">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#" data-rel="back">Cancelar</a></li>
+						<li><a href="#">Siguiente</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- PAGINA 2 DE RESERVA -->
+		<div data-role="page" id="nr2">
+			<div data-role="header">
+				<h1>Reserva</h1>
+			</div>
+			<div role="main" class="ui-content">
+				<ul data-role="listview">
+					<li data-role="list-divider">Selecciona datos extras:</li>
+					<li>Personas:
+						<select id="numPersonas">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+						</select>
+					</li>
+					<li>Habitaciones:
+						<select id="numHabitaciones">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+						</select>
+					</li>
+					<li>Dias:
+						<select id="numDias">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</li>
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="#" class="ui-btn-active">
+								Reservar
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<script src="phonegap.js"></script>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/actions.js"></script>
+		<script src="js/server.js"></script>
+		<script src="js/almacen.js"></script>
+		<script src="js/localStorage.js"></script>
+		<script src="js/API/mediaCapture.js"></script>
+		<script src="js/API/fileTransfer.js"></script>
+		<script src="js/API/network-information.js"></script>
+	</body>
+</html>
