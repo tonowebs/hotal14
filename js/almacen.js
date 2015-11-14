@@ -14,7 +14,7 @@ var almacen = {
 		almacen.db.transaction(almacen.tablaReserva, almacen.error, almacen.exito);
 	},
 	error: function(e){
-		alert("Error, codigo: "+e.code);
+		alert("Error", "codigo: "+e.code);
 	},
 	exito: function(){
 		alert("Reserva guardada en dispositivo, en espera de sincronizacion");
@@ -25,6 +25,6 @@ var almacen = {
 		tx.executeSql("INSERT INTO reservas(th, np, nh, nd) 
 			VALUES ('"+almacen.th+"','"+almacen.np+"','"+almacen.nh+"','"+almacen.nd+"')");
 	}
-};
+}
 
 
