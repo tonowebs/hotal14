@@ -41,20 +41,20 @@ var almacen = {
 	syncData: function(){
 		almacen.db = window.openDatabase("hotelApp", "1.0", "Hotel App", 200000);
 		almacen.db.transaction(almacen.leerReservas, almacen.error, almacen.reservaLeida);
-},
-		leerReservas: function(tx){
-			tx.executeSql("SELECT * FROM reservas", [], function(tx2,response){
-				for(i=0;i<response.rows.length;i++){
-					server.envRes(response.rows.item(i).th,response.rows.item(i).np,response.rows.item(i).nh,response.rows.item(i).nd);
-					server.guardarHistorial(response.rows.item(i).th,response.rows.item(i).np,response.rows.item(i).nh,response.rows.item(i).nd);
-				}
-				tx2.executeSql("DELETE FROM reservas");
-			}, almacen.error);
-		},
-		reservaLeida: function(){
-			alert("Reservas Sincronizadas");
-		}
+	},
+	leerReservas: function(tx){
+		tx.executeSql("SELECT * FROM reservas", [], function(tx2,response){
+			for(i=0;i<response.rows.length;i++){
+				server.envRes(response.rows.item(i).th,response.rows.item(i).np,response.rows.item(i).nh,response.rows.item(i).nd);
+				server.guardarHistorial(response.rows.item(i).th,response.rows.item(i).np,response.rows.item(i).nh,response.rows.item(i).nd);
+			}
+			tx2.executeSql("DELETE FROM reservas");
+		}, almacen.error);
+	},
+	reservaLeida: function(){
+		alert("Reservas Sincronizadas");
 	}
+	
 }
 
 
